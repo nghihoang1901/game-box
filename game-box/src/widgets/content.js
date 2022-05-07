@@ -50,10 +50,15 @@ class Content extends Component {
         if (mang[i].quantity > 1) {
           mang[i].quantity -= 1;
 
-        } else if (mang[i].quantity <= 1) {
-            
-             window.confirm ("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
-             mang.splice(mang[i],1);
+        }else {
+            // if(confirm("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không") == true){
+            //   mang.splice(mang[i],1);
+            // }
+            // else{
+
+            // }
+            window.confirm ("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
+            mang.splice(mang[i],1);
             
         }
       }

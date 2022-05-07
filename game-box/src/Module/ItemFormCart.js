@@ -42,12 +42,13 @@ class ItemFormCart extends Component {
           >
             +
           </button>
-          {/* <button            
+          <button 
+                       
             type="button"
             className={"btn btn-danger "}           
           >
             <i className={"bi bi-trash " }></i>
-          </button> */}
+          </button>
         </td>
       </tr>
     );
