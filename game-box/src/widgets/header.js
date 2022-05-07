@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import LoginForm from "../component/LoginForm";
 import GreetingForm from "../component/GreetingForm";
+import { NavLink } from "react-router-dom";
 
 class Header extends Component {
   constructor(props) {
@@ -124,7 +125,7 @@ class Header extends Component {
               <div className="top-menu">
                 <span className="menu"></span>
                 <ul className="nav1">
-                  <li className="active">
+                  {/* <li className="active">
                     <a href="index.html">Home</a>
                   </li>
                   <li>
@@ -141,10 +142,38 @@ class Header extends Component {
                   </li>
                   <li>
                     <a href="contact.html">Mail</a>
+                  </li> */}
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive ? "btn-link active" : "btn-link"
+                      }
+                    >
+                      Home
+                    </NavLink>
                   </li>
                   <li>
-                    {LogedInOrNot }
+                    <NavLink
+                      to="/gio-hang"
+                      className={({ isActive }) =>
+                        isActive ? "btn-link active" : "btn-link"
+                      }
+                    >
+                      Giỏ Hàng
+                    </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      to="/random"
+                      className={({ isActive }) =>
+                        isActive ? "btn-link active" : "btn-link"
+                      }
+                    >
+                      Random
+                    </NavLink>
+                  </li>
+                  <li>{LogedInOrNot}</li>
                 </ul>
               </div>
 
