@@ -26,7 +26,7 @@ class FormCart extends Component {
                     ItemCart={ItemCart}
                     handleAddToCart={this.props.handleAddToCart}
                     handleDescreaseItemCart={this.props.handleDescreaseItemCart}
-                    
+                    handleDeleteItem={this.props.handleDeleteItem}
                   />
                 );
               })}

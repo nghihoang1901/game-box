@@ -14,7 +14,9 @@ class ItemFormCart extends Component {
   handleDescreaseItemCartProcess = () => {
     this.props.handleDescreaseItemCart(this.props.ItemCart);
   };
-  
+  handleDeleteItemProcess = () => {
+    this.props.handleDeleteItem(this.props.ItemCart);
+  }
 
   render() {
 
@@ -26,7 +28,7 @@ class ItemFormCart extends Component {
           <img src={this.props.ItemCart.image} />
         </td>
         <td>{this.props.ItemCart.name}</td>
-        <td>
+        <td className="button">
           <button
             type="button"
             onClick={this.handleDescreaseItemCartProcess}
@@ -42,13 +44,13 @@ class ItemFormCart extends Component {
           >
             +
           </button>
-          {/* <button 
-                       
+          <button 
+              onClick={this.handleDeleteItemProcess}         
             type="button"
             className={"btn btn-danger "}           
           >
-            <i className={"bi bi-trash " }></i>
-          </button> */}
+            <i className={"bi bi-trash " + this.showOrHideItem}></i>
+          </button>
         </td>
       </tr>
     );
