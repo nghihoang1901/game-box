@@ -12,9 +12,11 @@ class Content extends Component {
     super(props);
     this.state = {
       mang_gio_hang: [],
+      showOrHideItemCart: false
     };
     
   }
+
 
 
   addToCart = (item) => {
@@ -50,8 +52,9 @@ class Content extends Component {
 
         } else if (mang[i].quantity <= 1) {
             
-           window.confirm("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
-          // this.state.mang.splice(mang[i].id,1);
+             window.confirm ("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
+             mang.splice(mang,i);
+            
         }
       }
     }

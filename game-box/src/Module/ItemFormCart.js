@@ -3,6 +3,9 @@ import React, { Component } from "react";
 class ItemFormCart extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      
+    }
   }
 
   handleAddToCartProcess = () => {
@@ -11,8 +14,11 @@ class ItemFormCart extends Component {
   handleDescreaseItemCartProcess = () => {
     this.props.handleDescreaseItemCart(this.props.ItemCart);
   };
+  
 
   render() {
+
+
     return (
       <tr>
         <td>{this.props.ItemCart.id}</td>
@@ -36,8 +42,14 @@ class ItemFormCart extends Component {
           >
             +
           </button>
-          <button type="button" className="btn btn-danger">
-            <i class="bi bi-trash"></i>
+          <button
+            
+            type="button"
+            className={"btn btn-danger "}
+            
+          >
+            <i className={"bi bi-trash " }></i>
+            {/* &times; */}
           </button>
         </td>
       </tr>
