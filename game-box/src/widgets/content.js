@@ -51,14 +51,9 @@ class Content extends Component {
           mang[i].quantity -= 1;
 
         }else {
-            // if(confirm("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không") == true){
-            //   mang.splice(mang[i],1);
-            // }
-            // else{
-
-            // }
             window.confirm ("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
-            mang.splice(mang[i],1);
+            mang.splice(i,1);
+            
             
         }
       }
