@@ -53,7 +53,7 @@ class Content extends Component {
         } else if (mang[i].quantity <= 1) {
             
              window.confirm ("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
-             mang.splice(mang,i);
+             mang.splice(mang[i],1);
             
         }
       }
