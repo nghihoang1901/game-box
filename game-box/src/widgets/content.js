@@ -51,14 +51,13 @@ class Content extends Component {
           mang[i].quantity -= 1;
 
         }else {
-          let Delete = window.confirm("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không");
-            
-            if(Delete === true){
-              mang.splice(i,1);
-            }
-            else{
-              // do nothing
-            }
+          
+          if(window.confirm("Bạn có muốn xóa sản phẩm này ra khỏi giỏ hàng không") === true){
+            mang.splice(i,1);
+          }
+          else{
+            //do nothing
+          } 
             
             
         }
