@@ -18,6 +18,8 @@ class ItemFormCart extends Component {
     this.props.handleDeleteItem(this.props.ItemCart);
   }
 
+  
+
   render() {
 
 

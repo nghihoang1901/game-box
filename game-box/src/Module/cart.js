@@ -12,6 +12,9 @@ class Cart extends Component {
       <div className="container_cart">
         <div className="icon_gio_hang">
           <img src="../images/gio_hang.jpg" />
+          <div className="tongsoluong">
+            {this.props.TongSoLuong}  
+          </div>
         </div>
         <div className="danh_sach_item_gio_hang">
           {this.props.CartItems.map((ItemCart) => {
