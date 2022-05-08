@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class Header extends Component {
     constructor(props) {
@@ -54,6 +55,14 @@ class Header extends Component {
                                     <li><a href="typo.html">News</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="contact.html">Mail</a></li>
+
+                                    {/* <Router>
+                                        <Routes>
+                                            <Route path={"/home"} element={<Trangchu />} />
+                                            <Route path='/' element={<About />} />
+                                        </Routes>
+                                    </Router> */}
+
                                 </ul>
                             </div>
                             
