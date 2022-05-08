@@ -1,17 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
-import Content from './widgets/Content';
-import Footer from './widgets/Footer';
 import Header from './widgets/Header';
+import Typography from './widgets/Typography';
+import Footer from './widgets/Footer';
 
-function App() {
+function News() {
   return (
     <div>
       <Header></Header>
-      <Content></Content>
+      <Typography></Typography>
       <Footer></Footer>
     </div>
   );
 }
 
-export default App;
+export default News;

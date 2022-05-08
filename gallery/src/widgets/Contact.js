@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Gallery extends Component {
+class Contact extends Component {
   constructor(props) {
     super(props);
   }
@@ -149,4 +149,4 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery;
+export default Contact;

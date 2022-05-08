@@ -1,17 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
-import Header from './widgets/Header';
-import Typography from './widgets/Typography';
+import Block from './widgets/Block';
 import Footer from './widgets/Footer';
 
-function App() {
+import Header from './widgets/Header';
+
+function Single() {
   return (
     <div>
       <Header></Header>
-      <Typography></Typography>
+      <Block></Block>
       <Footer></Footer>
     </div>
   );
 }
 
-export default App;
+export default Single;

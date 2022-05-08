@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import Gallery from './widgets/Gallery';
+import Contact from './widgets/Contact';
 import Header from "./widgets/Header";
 import Footer from "./widgets/Footer";
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Header></Header>
-      <Gallery></Gallery>
+      <Contact></Contact>
       <Footer></Footer>
     </div>
   );

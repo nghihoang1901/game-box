@@ -3,7 +3,7 @@ import Contact from './widgets/Contact';
 import Header from "./widgets/Header";
 import Footer from "./widgets/Footer";
 
-function App() {
+function Mail() {
   return (
     <div>
       <Header></Header>
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default Mail;

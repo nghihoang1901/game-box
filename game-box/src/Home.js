@@ -5,7 +5,7 @@ import Footer from "./widgets/Footer";
 import {BrowserRouter as Router } from 'react-router-dom';
 
 
-function App() {
+function Home() {
   return (
     <div>
       <Router>
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
