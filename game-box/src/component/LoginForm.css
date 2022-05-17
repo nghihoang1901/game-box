@@ -1,4 +1,4 @@
-.login-form {
+.login_form {
     position: absolute;
     min-width: 300px;
     background: #fff;
@@ -6,9 +6,10 @@
     border-radius: 0 10px 10px 10px;
 }
 
-.login-form.false{
+.login_form.false {
     display: none;
 }
-.login-form.true{
+
+.login_form.true {
     display: block;
 }

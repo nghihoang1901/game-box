@@ -5,6 +5,7 @@ import Cart from "../Module/cart";
 import GioHang from "../Page/GioHang";
 import { Routes, Route } from "react-router-dom";
 import RandomGroup from "../Page/RandomGroup";
+import DsProducts from "../Page/DSProducts";
 
 class Content extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class Content extends Component {
       this.setState((prevState) => {
         prevState.mang_gio_hang = mang;
         var tong_so_luong = 0;
-        for (var i=0 ; i<mang.length; i++){
+        for (var i = 0; i < mang.length; i++) {
           tong_so_luong += mang[i].quantity;
         }
         prevState.so_luong_gio_hang = tong_so_luong;
@@ -202,6 +203,7 @@ class Content extends Component {
             path="/product/:id_product"
             element={<DetailProduct danhsachgame={this.state.listgame} />}
           />
+          <Route path="/products" element={<DsProducts />} />
         </Routes>
 
         <Cart

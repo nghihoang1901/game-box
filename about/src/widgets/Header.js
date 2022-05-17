@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Gallery from "../../../gallery/src/Gallery";
+import About from "../About";
+// import  'dotenv / config';
+// import  express  from  'express';
+
+
 
 class Header extends Component {
     constructor(props) {
         super(props);
     }
-    state = {}
+    NODE_PATH = "./src/..";
     render() {
         return (
             <div>
@@ -49,19 +55,19 @@ class Header extends Component {
                             <div class="top-menu">
                                 <span class="menu"></span>
                                 <ul class="nav1">
-                                    <li><a href="index.html">Home</a></li>
+                                    {/* <li><a href="index.html">Home</a></li>
                                     <li class="active"><a href="about.html">About</a></li>
                                     <li><a href="reviews.html">Reviews</a></li>
                                     <li><a href="typo.html">News</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="contact.html">Mail</a></li>
+                                    <li><a href="contact.html">Mail</a></li> */}
 
-                                    {/* <Router>
+                                    <Router>
                                         <Routes>
-                                            <Route path={"/home"} element={<Trangchu />} />
+                                            <Route path={"/gallery"} element={<Gallery />} />
                                             <Route path='/' element={<About />} />
                                         </Routes>
-                                    </Router> */}
+                                    </Router>
 
                                 </ul>
                             </div>

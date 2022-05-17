@@ -1,6 +1,7 @@
-.containerLogedIn{
+.containerLogedIn {
     display: flex;
 }
-.greeting{
+
+.greeting {
     color: #fff;
 }
