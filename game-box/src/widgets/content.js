@@ -6,6 +6,7 @@ import GioHang from "../Page/GioHang";
 import { Routes, Route } from "react-router-dom";
 import RandomGroup from "../Page/RandomGroup";
 import DsProducts from "../Page/DSProducts";
+import ManageProduct from "../Page/manageProduct";
 
 class Content extends Component {
   constructor(props) {
@@ -204,6 +205,7 @@ class Content extends Component {
             element={<DetailProduct danhsachgame={this.state.listgame} />}
           />
           <Route path="/products" element={<DsProducts />} />
+          <Route path="admin/products" element={<ManageProduct />} />
         </Routes>
 
         <Cart

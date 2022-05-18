@@ -12,7 +12,7 @@ class DsProducts extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/products")
+      .get("http://localhost:4000/products?page=0")
       .then((response) => {
         // console.log(response);
         this.setState((preState) => {
