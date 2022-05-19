@@ -62,3 +62,10 @@ table td, th {
   color: #f00;
   font-weight: bold;
 }
+.btn-chose-delete{
+  display: flex;
+}
+.btn-chose-delete button{
+  width: 40px;
+  margin: 2px 0px 2px 10px;
+}

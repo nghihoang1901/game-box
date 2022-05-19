@@ -201,14 +201,13 @@ class DSProduct extends Component {
         <div>
           {this.state.ds_sp.map((itemProduct) => {
             return (
-              <div style={{ display: "flex" }}>
+              <div className="btn-chose-delete">
                 {itemProduct.id} - {itemProduct.ten_sach}
                 <button
                   type="button"
                   class="btn btn-info"
                   onClick={this.choseProductToEdit}
                   data-product={JSON.stringify(itemProduct)}
-                  style={{ width: "50px" }}
                 >
                   <span
                     class="glyphicon glyphicon-edit"
@@ -220,7 +219,6 @@ class DSProduct extends Component {
                   onClick={this.handleRemoveProduct}
                   type="button"
                   class="btn btn-large btn-block btn-danger"
-                  style={{ width: "50px" }}
                 >
                   <span
                     class="glyphicon glyphicon-trash"
