@@ -1,6 +1,6 @@
-import axios from "axios";
-import React, { Component, createRef } from "react";
-import DsProducts from "./DSProducts";
+import React, { Component } from "react";
+import DSProduct from "./DSProducts";
+const axios = require("axios").default;
 
 class ManageProduct extends Component {
   constructor(props) {
@@ -11,9 +11,12 @@ class ManageProduct extends Component {
       notice_message: "",
       ShowNotice: false,
     };
-    this.handleHideOrShowPopupAddnew = this.handleHideOrShowPopupAddnew.bind(this);
+
+    this.handleHideOrShowPopupAddNew =
+      this.handleHideOrShowPopupAddNew.bind(this);
+
     this.buttonShowHidePopupNotice = React.createRef();
-    this.buttonShowHidePopupAddnew = React.createRef();
+    this.buttonShowHidePopupAddNew = React.createRef();
   }
 
   componentDidMount() {
@@ -21,22 +24,12 @@ class ManageProduct extends Component {
   }
 
   handleChangeInput = (e) => {
+    //console.log( e.target.name);
     this.setState((prevState) => {
       prevState[e.target.name] = e.target.value;
       return prevState;
     });
   };
-
-  handleHideOrShowPopupAddnew = (notice_message) => {
-    this.setState((prevState) => {
-      prevState.notice_message = notice_message;
-      return prevState;
-    });
-    this.buttonShowHidePopupNotice.current.click();
-    setTimeout(() => {
-      this.buttonShowHidePopupAddnew.current.click();
-    }, 200);
-  }
 
   handleSubmitForm = (e) => {
     e.preventDefault();
@@ -48,18 +41,33 @@ class ManageProduct extends Component {
         don_gia: this.state.don_gia,
       })
       .then((response) => {
-        this.handleHideOrShowPopupAddnew("Thêm sách mới thành công");
+        // handle success
+        this.handleHideOrShowPopupAddNew("Thêm sách mới thành công");
         window.location.reload(false);
         console.log(response);
       })
       .catch((error) => {
-        this.handleHideOrShowPopupAddnew("Có lỗi xảy ra trong quá trình thêm");
+        // handle error
+        this.handleHideOrShowPopupAddNew("Có lỗi xảy ra trong quá trình thêm");
         console.log(error);
       })
-      .then(function () {});
+      .then(function () {
+        // always executed
+      });
   };
 
-  handleClosePopupNotice = () => {
+  handleHideOrShowPopupAddNew = (notice_message) => {
+    this.setState((prevState) => {
+      prevState.notice_message = notice_message;
+      return prevState;
+    });
+    this.buttonShowHidePopupAddNew.current.click();
+    setTimeout(() => {
+      this.buttonShowHidePopupNotice.current.click();
+    }, 200);
+  };
+
+  handleClosePopupNotice = (e) => {
     this.setState((prevState) => {
       prevState.notice_message = "";
       return prevState;
@@ -70,8 +78,8 @@ class ManageProduct extends Component {
     return (
       <div>
         <a
+          ref={this.buttonShowHidePopupAddNew}
           class="btn btn-primary"
-          ref={this.buttonShowHidePopupAddnew}
           data-toggle="modal"
           href="#modal-addnew"
         >
@@ -140,10 +148,10 @@ class ManageProduct extends Component {
 
         <a
           class="btn btn-primary"
+          style={{ display: "none" }}
           ref={this.buttonShowHidePopupNotice}
           data-toggle="modal"
           href="#modal-notice"
-          style={{ display: "none" }}
         >
           Trigger modal
         </a>
@@ -175,7 +183,7 @@ class ManageProduct extends Component {
           </div>
         </div>
 
-        <DsProducts />
+        <DSProduct />
       </div>
     );
   }
